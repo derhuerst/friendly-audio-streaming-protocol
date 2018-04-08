@@ -9,12 +9,14 @@ Sort of like [*AirPlay*](https://nto.github.io/AirPlay.html#introduction) and *D
 - un-overengineered: ~~XML~~ JSON, ~~[reverse HTTP](https://tools.ietf.org/id/draft-lentczner-rhttp-00.txt)~~ [WebSockets](https://en.wikipedia.org/wiki/WebSocket)
 - flexible: any client can control playback & play new media
 
+**If you want to try it out, head over to [Getting started](getting-started.md).**
+
 ![CC-licensed](https://img.shields.io/github/license/public-transport/friendly-public-transport-format.svg)
 [![chat on gitter](https://badges.gitter.im/public-transport/Lobby.svg)](https://gitter.im/public-transport/Lobby)
 
 ## How it works
 
-A FASP *receiver* is a WebSocket server. Any *client* can connect to it and send the following commands, encoded as JSON:
+A FASP *receiver* is a WebSocket server. Any number of *clients* can connect to it and send the following commands, encoded as JSON:
 
 - `['play', 'http://example.org/some-url']`
 - `['queue', 'http://example.org/some-url']`
@@ -40,7 +42,7 @@ A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast
 
 ## Existing implementations
 
-- [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) – A proof-of-concept *receiver* based on [`mplayer`](http://www.mplayerhq.hu/design7/news.html).
+- [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) – A proof-of-concept *receiver* based on [`mplayer`](http://www.mplayerhq.hu/).
 - [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) – A proof-of-concept command line *client*.
 
 ## Libraries
