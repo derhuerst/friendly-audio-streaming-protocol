@@ -2,10 +2,10 @@
 
 ## Server
 
-On the machine that is supposed to receive audio, install [`mplayer`](http://www.mplayerhq.hu/). On macOS, run this:
+On the machine that is supposed to receive audio, install [`mpv`](https://mpv.io/). On macOS, run this:
 
 ```shell
-brew install mplayer
+brew install mpv
 ```
 
 Install the server and give it a name and assign a port:

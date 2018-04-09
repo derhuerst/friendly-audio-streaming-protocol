@@ -49,5 +49,5 @@ A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast
 
 - [`fasp-client`](https://github.com/derhuerst/fasp-client) – A JS lib to connect to a *receiver* and send commands. It can also serve local files on demand, for the *receiver* to fetch. [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) uses it.
 - [`search-fasp-receivers`](https://github.com/derhuerst/search-fasp-receivers) – Search for *receivers* in the local network.
-- [`fasp-audio-receiver`](https://github.com/derhuerst/fasp-audio-receiver) – A JS lib to create & announce a *receiver*. You have to implement the audio playing.
+- [`fasp-receiver`](https://github.com/derhuerst/fasp-receiver) – A JS lib to create & announce a *receiver*. You have to implement the audio playing.
 - [`fasp-server`](https://github.com/derhuerst/fasp-server) – A JS lib to run a *receiver*, including audio playing. [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) uses it.
