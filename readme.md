@@ -22,21 +22,36 @@ A FASP *receiver* is a WebSocket server. Any number of *clients* can connect to 
 - `['queue', 'http://example.org/some-url']`
 - `['next']`
 - `['previous']`
-- `['play-pause']`
-- `['seek', 123]`
-- `['seek-percent', 42]`
-- `['set-volume', 70]`
+- `['remove', 2]`
 - `['stop']`
+- `['resume']`
+- `['pause']`
+- `['seek', 123, false, false]` (relative, in seconds)
+- `['seek', 123, true, false]` (absolute, in seconds)
+- `['seek', 123, true, true]` (absolute, in percent)
+- `['seek', 123, false, true]` (relative, in percent)
+- `['set-volume', 70]`
+- `['get-props']`
 
 The *receiver* may send the following commands to the client, encoded as JSON:
 
-- `['status', {filename, title, album, artist, length, progress, volume, playing}]`
+- `['prop', {filename, title, album, artist, length, progress, volume, playing}]`
+- `['prop', 'filename', 'some-file.ogg']`
+- `['prop', 'path', 'path/to/some-file.ogg']`
+- `['prop', 'duration', 219.5]`
+- `['prop', 'percent-pos', 2,477]`
+- `['prop', 'time-pos', 54.5]`
+- `['prop', 'pause', false]`
+- `['prop', 'volume', 70]`
+- `['prop', 'metadata', {title, album, artist, album_artist, track, disc}]`
+- `['prop', 'artwork', 'https://example.org/path/to/artwork.jpg']`
 
 A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS), with the following properties:
 
 - service type: `_fasp._tcp.`
-- name: a url-safe, ASCII string
-- id: a random hex ID, 16 characters
+- `name`: a url-safe, ASCII string
+- `id`: a random hex ID, 16 characters
+- `version`: the version of the protocol, `2` currently
 - hostname
 - port
 
