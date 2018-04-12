@@ -57,12 +57,13 @@ A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast
 
 ## Existing implementations
 
-- [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) – A proof-of-concept *receiver* based on [`mplayer`](http://www.mplayerhq.hu/).
+- [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) – A proof-of-concept *receiver* based on [`mpv`](https://mpv.io/).
 - [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) – A proof-of-concept command line *client*.
+- [`fasp-web-client`](https://github.com/derhuerst/fasp-client-cli) – A proof-of-concept *client* web app.
 
 ## Libraries
 
-- [`fasp-client`](https://github.com/derhuerst/fasp-client) – A JS lib to connect to a *receiver* and send commands. It can also serve local files on demand, for the *receiver* to fetch. [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) uses it.
+- [`fasp-client`](https://github.com/derhuerst/fasp-client) – A JS lib to connect to a *receiver* and send commands. It can also serve local files on demand, for the *receiver* to fetch. [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) and [`fasp-web-client`](https://github.com/derhuerst/fasp-web-client) use it.
 - [`search-fasp-receivers`](https://github.com/derhuerst/search-fasp-receivers) – Search for *receivers* in the local network.
 - [`fasp-receiver`](https://github.com/derhuerst/fasp-receiver) – A JS lib to create & announce a *receiver*. You have to implement the audio playing.
 - [`fasp-server`](https://github.com/derhuerst/fasp-server) – A JS lib to run a *receiver*, including audio playing. [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) uses it.
