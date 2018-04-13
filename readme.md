@@ -45,6 +45,7 @@ The *receiver* may send the following commands to the client, encoded as JSON:
 - `['prop', 'volume', 70]`
 - `['prop', 'metadata', {title, album, artist, album_artist, track, disc}]`
 - `['prop', 'artwork', 'https://example.org/path/to/artwork.jpg']`
+- `['prop', 'queue', ['some-file.ogg', 'another-file.mp3']]`
 
 A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS), with the following properties:
 
@@ -59,7 +60,7 @@ A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast
 
 - [`fasp-server-cli`](https://github.com/derhuerst/fasp-server-cli) – A proof-of-concept *receiver* based on [`mpv`](https://mpv.io/).
 - [`fasp-client-cli`](https://github.com/derhuerst/fasp-client-cli) – A proof-of-concept command line *client*.
-- [`fasp-web-client`](https://github.com/derhuerst/fasp-client-cli) – A proof-of-concept *client* web app.
+- [`fasp-web-client`](https://github.com/derhuerst/fasp-web-client) – A proof-of-concept *client* web app.
 
 ## Libraries
 
