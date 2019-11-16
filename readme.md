@@ -18,34 +18,34 @@ Sort of like [*AirPlay*](https://nto.github.io/AirPlay.html#introduction) and *D
 
 A FASP *receiver* is a WebSocket server. Any number of *clients* can connect to it and send the following commands, encoded as JSON:
 
-- `['play', 'http://example.org/some-url']`
-- `['queue', 'http://example.org/some-url']`
-- `['next']`
-- `['previous']`
-- `['remove', 2]`
-- `['stop']`
-- `['resume']`
-- `['pause']`
-- `['seek', 123, false, false]` (relative, in seconds)
-- `['seek', 123, true, false]` (absolute, in seconds)
-- `['seek', 123, true, true]` (absolute, in percent)
-- `['seek', 123, false, true]` (relative, in percent)
-- `['set-volume', 70]`
-- `['get-props']`
+- `["play", "http://example.org/some-url"]`
+- `["queue", "http://example.org/some-url"]`
+- `["next"]`
+- `["previous"]`
+- `["remove", 2]`
+- `["stop"]`
+- `["resume"]`
+- `["pause"]`
+- `["seek", 123, false, false]` (relative, in seconds)
+- `["seek", 123, true, false]` (absolute, in seconds)
+- `["seek", 123, true, true]` (absolute, in percent)
+- `["seek", 123, false, true]` (relative, in percent)
+- `["set-volume", 70]`
+- `["get-props"]`
 
 The *receiver* may send the following commands to the client, encoded as JSON:
 
-- `['prop', {filename, title, album, artist, length, progress, volume, playing}]`
-- `['prop', 'filename', 'some-file.ogg']`
-- `['prop', 'path', 'path/to/some-file.ogg']`
-- `['prop', 'duration', 219.5]`
-- `['prop', 'percent-pos', 2,477]`
-- `['prop', 'time-pos', 54.5]`
-- `['prop', 'pause', false]`
-- `['prop', 'volume', 70]`
-- `['prop', 'metadata', {title, album, artist, album_artist, track, disc}]`
-- `['prop', 'artwork', 'https://example.org/path/to/artwork.jpg']`
-- `['prop', 'queue', ['some-file.ogg', 'another-file.mp3']]`
+- `["prop", {"filename": …, "title": …, "album": …, "artist": …, "length": …, "progress": …, "volume": …, "playing": …}]`
+- `["prop", "filename", "some-file.ogg"]`
+- `["prop", "path", "path/to/some-file.ogg"]`
+- `["prop", "duration", 219.5]`
+- `["prop", "percent-pos", 2,477]`
+- `["prop", "time-pos", 54.5]`
+- `["prop", "pause", false]`
+- `["prop", "volume", 70]`
+- `["prop", "metadata", {title, album, artist, album_artist, track, disc}]`
+- `["prop", "artwork", "https://example.org/path/to/artwork.jpg"]`
+- `["prop", "queue", ["some-file.ogg", "another-file.mp3"]]`
 
 A *receiver* announces itself via [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS), with the following properties:
 
